@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 
 RUN apt update
 RUN apt upgrade -y
+
 RUN apt-get install yum-utils alien -y
 RUN rpm -Uvh https://mirrors.ripple.com/ripple-repo-el7.rpm
 RUN yumdownloader --enablerepo=ripple-stable --releasever=el7 rippled
